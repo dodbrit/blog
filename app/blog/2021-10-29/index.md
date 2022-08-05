@@ -1,11 +1,11 @@
 ---
-slug: terminating-namespaces
+slug: 2021-10-29/terminating-namespaces
 title: Terminating Namespaces
 authors: [ Peter ]
 tags: [Kubernetes, Troubleshooting]
 ---
 
-![Terminating Namespaces Hero](img/TerminatingNamespaces.png)
+![Terminating Namespaces Hero](TerminatingNamespaces.png)
 
 After you start playing around with *Kubernetes*, or even *Red Hat OpenShif*t, you are potentially going to run into an issue that I’ve had to encounter many times. Sometimes it happens quickly, other times it takes longer, but eventually you will run into the issue of a namespace trying to terminate but appear to be stuck.
 
