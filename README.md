@@ -1,6 +1,6 @@
-# dodbrit Documentation
+# dodbrit Blog
 
-To read the documentation click (here)[#]
+To read the blog click [here](https://blog.dodbrit.dev)
 
 ### Development
 To run the development server, build the Dockerfile and run.
