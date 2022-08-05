@@ -2,7 +2,7 @@
 FROM node:18.7.0-bullseye-slim
 
 ## INCLUDE DOCUMENTATION
-COPY . /app
+COPY /app /app
 
 ## DEFINE WORKING DIRECTORY
 WORKDIR /app
