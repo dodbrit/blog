@@ -7,6 +7,12 @@ on:
     # Review gh actions docs if you want to further define triggers, paths, etc
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
+## DEFINE DEFAULT WORKING DIRECTORY
+defaults:
+  run:
+    working-directory: app
+
+## DEFPLOY BLOG VIA GITHUB PAGES
 jobs:
   deploy:
     name: Deploy to GitHub Pages
@@ -16,12 +22,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: yarn
+          cache: npm
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
+
       - name: Build website
-        run: yarn build
+        run: npm run build
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
