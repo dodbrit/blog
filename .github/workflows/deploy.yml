@@ -10,7 +10,8 @@ on:
 
 ## DEFINE WORKFLOW
 jobs:
-  publish:
+  deploy:
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     steps:
 
