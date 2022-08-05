@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'dodbrit',
   tagline: 'Documentation Repo',
-  url: 'https://dodbrit.dev',
-  baseUrl: '/',
+  url: 'https://dodbrit.github.io',
+  baseUrl: '/blog/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
