@@ -1,7 +1,7 @@
 ---
-slug: welcome
-title: Welcome
-authors: [ Peter ]
+title: About Me
+description: About Me
+hide_table_of_contents: true
 ---
 
 <div align="center">
@@ -11,8 +11,6 @@ authors: [ Peter ]
 ## Welcome!
 
 As a quick introduction, my name is Peter Keech. I’m a DevOps (DevSecOps) Engineer working in the government sector and a U.S. Air Force Veteran. I have a passion for all things DevOps and I am always learning new things about the technology.
-
-<!--truncate-->
 
 The goal of this blog is to hopefully become a collection of lessons learnt throughout my journey in aiding the government in adopting DevOps policies and practices, as well as documenting my own growth along the way.
 
