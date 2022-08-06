@@ -37,10 +37,7 @@ const config = {
         blog: {
           routeBasePath: '/',
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          //editUrl:
-          //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          postsPerPage: 3,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -56,6 +53,11 @@ const config = {
         defaultMode: 'light',
         disableSwitch: true,
       },
+      /* algolia: {
+        appId: 'YOUR_APP_ID',
+        apiKey: 'YOUR_SEARCH_API_KEY',
+        indexName: 'YOUR_INDEX_NAME',
+      }, */
       navbar: {
         title: '',
         style: 'dark',
@@ -68,6 +70,11 @@ const config = {
           {
             to: '/', 
             label: 'Home', 
+            position: 'left'
+          },
+          {
+            to: '/archive', 
+            label: 'Archive', 
             position: 'left'
           },
           // RIGHT

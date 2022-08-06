@@ -23,7 +23,7 @@
 /* TESTING */
 .navbar__link--active,
 [data-theme='dark'] {
-  color: #dde5ff !important;
+  color: #ffffff !important;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -69,6 +69,7 @@
 .github-link:before {
   content: "";
   margin-left: 14px;
+  margin-top: 5px;
   width: 24px;
   height: 24px;
   display: flex;
@@ -82,6 +83,7 @@
 .linkedin-link:before {
   content: "";
   margin-left: 14px;
+  margin-top: 5px;
   width: 24px;
   height: 24px;
   display: flex;
@@ -95,6 +97,7 @@
 .email-link:before {
   content: "";
   margin-left: 14px;
+  margin-top: 5px;
   width: 24px;
   height: 24px;
   display: flex;
