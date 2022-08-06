@@ -11,9 +11,9 @@ export default function BlogPostItemWrapper(props) {
   return (
     <>
       <BlogPostItem {...props} />
-      {comments && (
+{/*       {comments && (
         <DiscussionEmbed
-          shortname='your-disqus-shortname'
+          shortname='dodbrit-blog'
           config={{
             url: slug,
             identifier: slug,
@@ -21,7 +21,7 @@ export default function BlogPostItemWrapper(props) {
             language: 'en_US',
           }}
         />
-      )}
+      )} */}
     </>
   )
 }

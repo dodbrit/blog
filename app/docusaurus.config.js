@@ -37,10 +37,7 @@ const config = {
         blog: {
           routeBasePath: '/',
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          //editUrl:
-          //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          postsPerPage: 3,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -56,6 +53,11 @@ const config = {
         defaultMode: 'light',
         disableSwitch: true,
       },
+      /* algolia: {
+        appId: 'YOUR_APP_ID',
+        apiKey: 'YOUR_SEARCH_API_KEY',
+        indexName: 'YOUR_INDEX_NAME',
+      }, */
       navbar: {
         title: '',
         style: 'dark',
@@ -65,25 +67,19 @@ const config = {
         },
         items: [
           // LEFT
-          // {
-          //   type: 'doc',
-          //   docId: 'home',
-          //   position: 'left',
-          //   label: 'Documentation',
-          // },
-          // {
-          //   to: '/blog', 
-          //   label: 'Blog', 
-          //   position: 'left'
-          // },
           {
             to: '/', 
             label: 'Home', 
             position: 'left'
           },
+          {
+            to: '/archive', 
+            label: 'Archive', 
+            position: 'left'
+          },
           // RIGHT
           {
-            href: 'https://github.com/dodbrit/documentation',
+            href: 'https://github.com/dodbrit/blog',
             className: 'github-link',
             'aria-label': 'GitHub',
             position: 'right',
@@ -104,12 +100,6 @@ const config = {
       },
       footer: {
         style: 'light',
-        //logo: {
-        //  alt: 'DODBRIT',
-        //  src: 'img/dodbrit-logo.png',
-        //  width: 300,
-        //  height: 300,
-        //},
         copyright: `Copyright © ${new Date().getFullYear()} <br /><i>Posts have been created from personal experiences working on personal and professional projects and have not been influenced by any vendor. Built with Docusaurus.</i>`,
       },
       prism: {

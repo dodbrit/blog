@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"yaml.schemas": {
+			"https://json.schemastore.org/github-action.json": "file:///Volumes/Storage/Repositories/dodbrit/documentation/.github/workflows/deploy.yml"
+		}
+	}
+}
