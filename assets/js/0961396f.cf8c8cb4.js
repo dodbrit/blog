@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp=self.webpackChunkapp||[]).push([[5232],{634:a=>{a.exports=JSON.parse('{"label":"K3S","permalink":"/tags/k-3-s","allTagsPath":"/tags","count":4}')}}]);
