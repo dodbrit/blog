@@ -77,6 +77,11 @@ const config = {
             label: 'Archive', 
             position: 'left'
           },
+          {
+            to: '/about', 
+            label: 'About Me', 
+            position: 'left'
+          },
           // RIGHT
           {
             href: 'https://github.com/dodbrit/blog',
