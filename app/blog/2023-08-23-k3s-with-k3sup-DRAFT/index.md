@@ -1,5 +1,5 @@
 ---
-slug: 2022-08-23/k3s-with-k3sup
+slug: 2023-08-23/k3s-with-k3sup-DRAFT
 title: Deploy a K3S Cluster with k3sup
 authors: [ Peter ]
 tags: [Kubernetes, K3S, k3sup, nginx]

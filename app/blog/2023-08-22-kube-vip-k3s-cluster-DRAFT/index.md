@@ -1,5 +1,5 @@
 ---
-slug: 2022-08-22/kube-vip-k3s-cluster
+slug: 2023-08-22/kube-vip-k3s-cluster-DRAFT
 title: Deploy a K3S Cluster with Kube-Vip
 authors: [ Peter ]
 tags: [Kubernetes, K3S, Kube-Vip, Nginx, CloudFlare]

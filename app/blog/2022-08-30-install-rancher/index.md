@@ -9,7 +9,7 @@ draft: true
 
 ![Thumbnail](Thumbnail.png)
 # Install Rancher in a K3S Cluster
-Morning everyone! Since it has been awhile since I've posted an article, I'm going to start with a simple one that I always seem to reference. After reading this short post, you should be able to deploy a Rancher installation in a K3S cluster that is exposed via NGINX Ingress and has a valid SSL certificate provided by Lets Encrypt.
+Since it has been awhile since I've posted an article, I'm going to start with a simple one that I always seem to need to reference. After reading this short post, you should be able to deploy a Rancher installation in a K3S cluster that is exposed via NGINX Ingress and has a valid SSL certificate provided by Lets Encrypt.
 
 <!--truncate-->
 
@@ -38,10 +38,21 @@ helm upgrade --install rancher rancher-latest/rancher \
 b) Install via Helm Values File
 
 ``` yaml title="values.yaml" showLineNumbers
-
+hostname: rancher.dodbrit.dev
+replicas: 1
+tls: ingress
+ingress:
+  ingressClassName: nginx
+  tls:
+    source: secret
+  extraAnnotations:
+    cert-manager.io/cluster-issuer: le-issuer
 ```
 
 ``` bash
+helm upgrade --install rancher rancher-latest/rancher \
+    --namespace cattle-system --create-namespace \
+    -f values.yaml
 ```
 
 3. Validate Successfully Installation
@@ -54,7 +65,7 @@ rancher-869c99776d-cv9fk          1/1     Running    0          7m20s   10.42.0.
 rancher-webhook-f8785574f-fvbr2   1/1     Running    0          5m23s   10.42.0.83   dell.dodbrit.dev   <none>           <none>
 ```
 
-4. Obtain the Administrator Password
+1. Obtain the Administrator Password
    
 ``` bash
 kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{.data.bootstrapPassword|base64decode}}{{ "\n" }}'
@@ -64,6 +75,17 @@ kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{
 ![Rancher Screenshot](Screenshot.png)
 
 
+### In case you were wondering
+The table below depicts the values used during installation and why they were needed;
+
+| Value | Description |
+| --- | --- |
+| `hostname` | The URL of Rancher. Used in the Ingress |
+| `replicas` | The number of WebApp Pod to deploy (for HA) |
+| `ingress.ingressClassName` | Ensures the correct Cluster Ingress is used |
+| `ingress.tls.source` | Configures Rancher to expect the TLS certificate to be in a secret (default: tls-rancher-ingress) |
+| `ingress.extraAnnotations` | This annotation Prompts CertManager to obtain an SSL Certificate from LetsEncrypt |
+
 ## Uninstall
 To uninstall Rancher, perform the following command;
 
@@ -71,6 +93,3 @@ To uninstall Rancher, perform the following command;
 ``` bash
 helm uninstall -n cattle-system rancher
 ```
-
-## Summary
-If you 

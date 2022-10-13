@@ -1,5 +1,5 @@
 ---
-slug: 2022-08-06/k3s-nginx-rancher
+slug: 2023-08-06/k3s-nginx-rancher-DRAFT
 title: Deploy Rancher in a K3S Cluster with Ingress-Nginx
 authors: [ Peter ]
 tags: [Kubernetes, K3S, Rancher, Nginx]
