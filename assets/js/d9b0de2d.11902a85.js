@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp=self.webpackChunkapp||[]).push([[2522],{25:e=>{e.exports=JSON.parse('{"label":"Kubernetes","permalink":"/tags/kubernetes","allTagsPath":"/tags","count":7}')}}]);
