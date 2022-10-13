@@ -1,11 +1,13 @@
 ---
-slug: 2022-08-06/k3s-nginx-rancher
+slug: 2023-08-06/k3s-nginx-rancher-DRAFT
 title: Deploy Rancher in a K3S Cluster with Ingress-Nginx
 authors: [ Peter ]
 tags: [Kubernetes, K3S, Rancher, Nginx]
+image: Thumbnail.png
 draft: true
 ---
 
+![Thumbnail](Thumbnail.png)
 # Deploy Rancher in a K3S Cluster with Ingress-Nginx
 *Placeholder*
 
@@ -238,21 +240,21 @@ apiVersion: v1
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-name: example
-namespace: foo
+  name: ingress-myservice
+  namespace: foo
 spec:
-    ingressClassName: nginx
-rules:
-    - host: www.example.com
+  rules:
+  - host: www.example.com
     http:
-        paths:
-        - pathType: Prefix
-            backend:
-            service:
-                name: exampleService
-                port:
-                number: 80
-            path: /
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: myService
+            port:
+              number: 80
+  ingressClassName: nginx
 # This section is only required if TLS is to be enabled for the Ingress
 tls:
     - hosts:
