@@ -1,0 +1,9 @@
+[submodule "blog/themes/m10c"]
+	path = blog/themes/m10c
+	url = https://github.com/vaga/hugo-theme-m10c.git
+[submodule "blog/themes/PaperMod"]
+	path = blog/themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "blog/themes/hugo-notice"]
+	path = blog/themes/hugo-notice
+	url = https://github.com/martignoni/hugo-notice.git
