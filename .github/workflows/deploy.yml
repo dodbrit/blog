@@ -29,6 +29,7 @@ jobs:
 
       ## BUILD HUGO WEBSITE
       - name: Build
+        working-directory: ./blog
         run: hugo --minify
 
       ## DEPLOY TO GITHUB PAGES
