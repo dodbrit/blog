@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp=self.webpackChunkapp||[]).push([[1122],{2184:e=>{e.exports=JSON.parse('{"permalink":"/tags/rancher","page":1,"postsPerPage":3,"totalPages":2,"totalCount":5,"nextPage":"/tags/rancher/page/2","blogDescription":"Blog","blogTitle":"Blog"}')}}]);
