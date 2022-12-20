@@ -2,6 +2,7 @@ baseURL: "https://dodbrit.io" # if your site is in 'https', then make sure your 
 title: DODBRIT
 paginate: 5
 theme: ['hugo-notice', 'PaperMod']
+publishDir: "public"
 
 enableRobotsTXT: true
 buildDrafts: false

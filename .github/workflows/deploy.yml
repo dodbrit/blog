@@ -31,13 +31,13 @@ jobs:
       - name: Build
         run: hugo --source ./blog --minify
 
-      ## DEPLOY TO GITHUB PAGES
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./blog/public
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
-          cname: dodbrit.io
+      # ## DEPLOY TO GITHUB PAGES
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   if: github.ref == 'refs/heads/main'
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: public
+      #     user_name: github-actions[bot]
+      #     user_email: 41898282+github-actions[bot]@users.noreply.github.com
+      #     cname: dodbrit.io
