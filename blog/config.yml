@@ -1,0 +1,76 @@
+baseURL: "https://dodbrit.io" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+title: DODBRIT
+paginate: 5
+theme: ['hugo-notice', 'PaperMod']
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+## USED FOR SEARCH PAGE
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
+
+## DEFINE MENU
+menu:
+  main:
+    - identifier: blog
+      name: Blog
+      url: /posts/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: archive
+      name: Archives
+      url: /archives/
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
+    - identifier: about
+      name: 'About Me'
+      url: /about/
+      weight: 50
+    # - identifier: example
+    #   name: example.org
+    #   url: https://example.org
+    #   weight: 30
+
+params:
+  ShowReadingTime: true
+  ShowShareButtons: true
+  #ShowPostNavLinks: true
+  #ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+
+  assets:
+    favicon: '/images/favicon.ico'
+
+  profileMode:
+    enabled: true
+    title: DoDBrit
+    subtitle: "A DevOps Journey"
+    imageUrl: "/images/logo.png"
+    imageWidth: 240
+    imageHeight: 240
+    imageTitle: DODBRIT LOGO
+    buttons:
+      - name: Blog
+        url: posts
+      - name: 'About Me'
+        url: about
+
+  socialIcons: # optional
+    - name: "github"
+      url: "https://github.com/pkeech"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/peter-keech-b88183a2"
+    - name: "email"
+      url: "mailto:peter@keech.co"

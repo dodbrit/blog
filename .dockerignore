@@ -1,6 +1,0 @@
-## SKIP FILES WHILE BUILDING IMAGE
-.gitignore
-LICENSE
-README.md
-.vscode/
-.github/
