@@ -1,0 +1,14 @@
+## DEFINE VERSION
+version: '2.6'
+
+## DEFINE HUGO SERVICES
+services:
+  blog:
+    build:
+      dockerfile: ./Dockerfile
+    container_name: blog
+    ports:
+      - 8080:8080
+    volumes:
+      - ./blog:/blog
+      
