@@ -1,3 +1,6 @@
+## IGNORE DEV FILES
+.vscode
+
 # Generated files by hugo
 /blog/public
 /blog/resources/_gen
