@@ -6,6 +6,9 @@ To read the blog click [here](https://blog.dodbrit.dev)
 To run the development server, build the Dockerfile and run.
 
 ``` bash
+### PULL GIT SUBMODULES
+$   git submodule update --init --recursive
+
 ## BUILD IMAGE
 $   docker build -t docs:test .
 
